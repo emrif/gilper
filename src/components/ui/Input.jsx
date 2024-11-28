@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import { cn } from "../../utils/cn";
+
 const Input = ({
-  value,
-  onChange,
-  placeholder,
+  defaultValue = "",
+  onChange = () => {},
+  placeholder = "",
   disabled = false,
   style = {},
   className = "",
@@ -11,32 +12,26 @@ const Input = ({
   return (
     <input
       type="text"
-      value={value}
+      defaultValue={defaultValue}
       onChange={onChange}
       placeholder={placeholder}
       disabled={disabled}
       style={style}
-      className={cn("rounded-lg h-10 w-full p-2 text-text", className)}
+      className={cn(
+        "rounded-lg h-10 w-full p-2 bg-accent text-text",
+        className
+      )}
     />
   );
 };
 
 Input.propTypes = {
-  value: PropTypes.string,
+  defaultValue: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   style: PropTypes.object,
   className: PropTypes.string,
-};
-
-Input.defaultProps = {
-  value: "",
-  onChange: () => {},
-  placeholder: "",
-  disabled: false,
-  style: {},
-  className: "",
 };
 
 export default Input;

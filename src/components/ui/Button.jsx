@@ -9,7 +9,7 @@ const Button = ({ children, onClick = () => { }, disabled = false, style = {}, c
                onClick={onClick}
                disabled={disabled}
                style={style}
-               className={cn('h-10 bg-white rounded-[8px] w-16 flex justify-center items-center hover:bg-blue-200 transition delay-5000', className)} >
+               className={cn('h-10 rounded-[8px] bg-accent w-16 flex justify-center items-center transition delay-5000', className)} >
                {children}
           </button>
      );
@@ -22,13 +22,6 @@ Button.propTypes = {
      disabled: PropTypes.bool,
      style: PropTypes.object
 
-};
-
-Button.defaultProps = {
-     onClick: () => { },
-     disabled: false,
-     style: {},
-     className: ''
 };
 
 export default Button;
