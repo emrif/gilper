@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pull": "git pull --no-rebase origin devbranch"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.61.5",
