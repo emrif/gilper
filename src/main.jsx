@@ -5,16 +5,19 @@ import { RouterProvider } from "react-router-dom";
 import router from "./routes/Routes";
 import "./index.css";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "./provider/ThemeProvider";
 
 const qc = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={qc}>
-      <div className="antialiased font-ubuntu bg-background text-text">
-        <Toaster position="top-center" />
-        <RouterProvider router={router} />
-      </div>
+      <ThemeProvider>
+        <div className="antialiased font-ubuntu bg-background text-text">
+          <Toaster position="top-center" />
+          <RouterProvider router={router} />
+        </div>
+      </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>
 );

@@ -1,6 +1,7 @@
 import { TbCameraSearch } from "react-icons/tb";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
+import ThemeToggle from "../ThemeToggle";
 
 const NavBar = () => {
   return (
@@ -15,6 +16,7 @@ const NavBar = () => {
       </div>
       <div>Logo</div>
       <div>User</div>
+      <ThemeToggle />
     </nav>
   );
 };
