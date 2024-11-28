@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>git pull origin branch-name</div>;
+  return <div>git pull origin branch-name </div>;
 }
