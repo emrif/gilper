@@ -1,5 +1,4 @@
 export default function Home() {
-  return (
-    <div>jajajajajajajajnakanafdjfdjfhdjfhfdfdfdfjdfhgitkanaka</div>
-  );
+  return <div>git pull origin branch-name </div>;
+
 }
