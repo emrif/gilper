@@ -11,6 +11,8 @@ export default function Root() {
           <Outlet />
         </div>
 
+
+        
         <Footer />
       </div>
     </>
