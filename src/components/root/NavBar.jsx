@@ -5,7 +5,7 @@ import Input from "../ui/Input";
 
 const NavBar = () => {
      return (
-          <nav className="bg-[#62b2dd] w-full flex justify-between h-16">
+          <nav className="flex justify-between w-full h-16 bg-secondary">
                <div className="mt-2 ml-2">
                     <span className="flex gap-2">
                          <Input></Input>
