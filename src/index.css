@@ -18,3 +18,7 @@
     --accent: #575266;
   }
 }
+/* transitions */
+.theme-animation {
+  transition: background-color 0.5s ease !important;
+}
