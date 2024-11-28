@@ -5,7 +5,7 @@ import ThemeToggle from "../ThemeToggle";
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-around w-full h-16 bg-secondary">
+    <nav className="flex items-center justify-around w-full h-16 bg-secondary ">
       <div className="m-2">
         <span className="flex gap-2">
           <Input></Input>

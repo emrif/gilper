@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={qc}>
       <ThemeProvider>
-        <div className="antialiased font-ubuntu bg-background text-text">
+        <div className="antialiased font-ubuntu bg-background text-text theme-animation">
           <Toaster position="top-center" />
           <RouterProvider router={router} />
         </div>
