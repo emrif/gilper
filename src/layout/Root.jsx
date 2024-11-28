@@ -10,6 +10,9 @@ export default function Root() {
         <div className="container mx-auto">
           <Outlet />
         </div>
+
+
+        
         <Footer />
       </div>
     </>
