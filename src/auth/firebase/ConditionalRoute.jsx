@@ -1,8 +1,11 @@
 import { useContext } from "react";
-import { AuthContext } from "../providers/AuthProvider";
+import { AuthContext } from "./AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
-import Loading from "../components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 import PropTypes from "prop-types";
+
+
+
 
 const ConditionalRoute = ({children}) => {
     const {loading, user} = useContext(AuthContext);
