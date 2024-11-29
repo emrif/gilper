@@ -3,7 +3,7 @@ import { cn } from "../../utils/cn";
 
 const Button = ({
   children,
-  onClick = () => {},
+  onClick = () => { },
   disabled = false,
   style = {},
   className = "",
