@@ -42,7 +42,7 @@ jobs:
           if [ "${{ github.ref_name }}" == "main" ]; then
             echo "FIREBASE_PROJECT=gilper-org" >> $GITHUB_ENV
           elif [ "${{ github.ref_name }}" == "devbranch" ]; then
-            echo "FIREBASE_PROJECT=gilper-org-test" >> $GITHUB_ENV
+            echo "FIREBASE_PROJECT=gilper-org-dev" >> $GITHUB_ENV
           else
             echo "unknown branch, skipping deployment"
             exit 1
