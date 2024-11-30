@@ -16,8 +16,12 @@ jobs:
       - name: Build
         env:
           CI: true
-          # VITE_WEBHOOK: ${{ secrets.VITE_WEBHOOK }}
-          # VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          VITE_APIKEY: ${{ secrets.VITE_APIKEY }}
+          VITE_AUTHDOMAIN: ${{ secrets.VITE_AUTHDOMAIN }}
+          VITE_PROJECTID: ${{ secrets.VITE_PROJECTID }}
+          VITE_STORAGEBUCKET: ${{ secrets.VITE_STORAGEBUCKET }}
+          VITE_MESSAGINGSENDERID: ${{ secrets.VITE_MESSAGINGSENDERID }}
+          VITE_APPID: ${{ secrets.VITE_APPID }}
         run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v4
@@ -40,9 +44,9 @@ jobs:
         id: firebase_project
         run: |
           if [ "${{ github.ref_name }}" == "main" ]; then
-            echo "FIREBASE_PROJECT=gilper-org" >> $GITHUB_ENV
+            echo "FIREBASE_PROJECT=${{secrets.VITE_PROJECTID}}" >> $GITHUB_ENV
           elif [ "${{ github.ref_name }}" == "devbranch" ]; then
-            echo "FIREBASE_PROJECT=gilper-org-dev" >> $GITHUB_ENV
+            echo "FIREBASE_PROJECT=${{secrets.VITE_PROJECTID_DEV}}" >> $GITHUB_ENV
           else
             echo "unknown branch, skipping deployment"
             exit 1
