@@ -5,13 +5,14 @@ export default {
     extend: {
       fontFamily: {
         ubuntu: ["Ubuntu", "serif"],
+        exo: ["Exo", "sans-serif"],
       },
       colors: {
-        'text': 'var(--text)',
-        'background': 'var(--background)',
-        'primary': 'var(--primary)',
-        'secondary': 'var(--secondary)',
-        'accent': 'var(--accent)',
+        text: "var(--text)",
+        background: "var(--background)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
       },
     },
   },
