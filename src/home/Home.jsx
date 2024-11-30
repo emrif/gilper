@@ -1,7 +1,9 @@
+import Gallery from "../components/gallery/Gallery";
+
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      beautiful(with deploy for dev)
-    </div>
+    <>
+      <Gallery></Gallery>
+    </>
   );
 }
