@@ -4,26 +4,26 @@ import Input from "../ui/Input";
 import ThemeToggle from "../ThemeToggle";
 import { useThemeContext } from "../../provider/ThemeProvider";
 
-
 const NavBar = () => {
-
   const { theme } = useThemeContext();
-  console.log(theme);
+
   return (
     <nav className="flex items-center justify-around w-full h-16 bg-secondary pr-3">
       {/* Logo */}
       <div className="">
-        {
-          theme === 'light' ? (<img className="w-auto h-8 md:h-12" src="/gilper-light.svg" ></img>) : (<img className="w-auto h-8 md:h-12" src="/gilper-dark.svg" ></img>)
-        }
+        {theme === "light" ? (
+          <img
+            className="w-auto h-8 md:h-12"
+            src="/gilper-light.svg"></img>
+        ) : (
+          <img
+            className="w-auto h-8 md:h-12"
+            src="/gilper-dark.svg"></img>
+        )}
       </div>
-
 
       {/* Menu */}
-      <div className="">
-
-      </div>
-
+      <div className=""></div>
 
       {/* Buttons */}
       <div className="flex gap-2">
@@ -35,7 +35,6 @@ const NavBar = () => {
         </span>
         <ThemeToggle />
       </div>
-
     </nav>
   );
 };
