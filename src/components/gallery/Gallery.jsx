@@ -35,7 +35,7 @@ const Gallery = () => {
      );
 
      return (
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid my-10 grid-cols-4 gap-4">
                {grid.map((row, rowIndex) => (
                     <div key={rowIndex} className="grid gap-4">
                          {row.map((src, colIndex) => (
@@ -48,7 +48,7 @@ const Gallery = () => {
                                         }`}
                               >
                                    <img
-                                        className="w-full h-full object-cover"
+                                        className="w-full  transition-all duration-300 hover:scale-105 h-full object-cover"
                                         src={src}
                                         alt={`Gallery item ${rowIndex * columns + colIndex}`}
                                    />
